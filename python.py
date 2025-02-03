@@ -133,3 +133,17 @@
 #     acc1.debit(amnt)
 # else:
 #     print("Invalid Entry")
+
+class circle:
+    def __init__(self,radius):
+        self.radius=radius
+    @property
+    def area(self):
+        return 3.14*self.radius*self.radius
+    @property
+    def perimeter(self):
+        return 2*3.14*self.radius
+    
+cir1 = circle(15)
+print(cir1.area)
+print(cir1.perimeter)
