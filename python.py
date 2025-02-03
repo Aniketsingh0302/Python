@@ -148,27 +148,38 @@
 # print(cir1.area)
 # print(cir1.perimeter)
 
-class employee:
-    def __init__(self, role, dept, salary):
-        self.role = role
-        self.dept = dept
-        self.salary = salary
-    def showDetails(self):
-        print("Role is -->",self.role)
-        print("Department is -->",self.dept)
-        print("Salary is -->",self.salary)
-class engineer(employee):
-    def __init__(self,name , age):
-        self.name = name
-        self.age = age
-        super().__init__("Engineer","IT", "60000")
-    def showdetails(self):
-            print("Name is -->",self.name)
-            print("Age is -->",self.age)
+# class employee:
+#     def __init__(self, role, dept, salary):
+#         self.role = role
+#         self.dept = dept
+#         self.salary = salary
+#     def showDetails(self):
+#         print("Role is -->",self.role)
+#         print("Department is -->",self.dept)
+#         print("Salary is -->",self.salary)
+# class engineer(employee):
+#     def __init__(self,name , age):
+#         self.name = name
+#         self.age = age
+#         super().__init__("Engineer","IT", "60000")
+#     def showdetails(self):
+#             print("Name is -->",self.name)
+#             print("Age is -->",self.age)
 
-employee1= employee("CA","Finance","75000")
-employee1.showDetails()
-print("------Inheritance-------")
-engineer1= engineer("Rahul","45")
-engineer1.showdetails()
-engineer1.showDetails()
+# employee1= employee("CA","Finance","75000")
+# employee1.showDetails()
+# print("------Inheritance-------")
+# engineer1= engineer("Rahul","45")
+# engineer1.showdetails()
+# engineer1.showDetails()
+
+# class order:
+#     def __init__(self, item, price):
+#         self.item = item
+#         self.price = price
+#     def __gt__(self,odr2):
+#         return self.price>odr2.price
+    
+# ordr1= order("chips",20)
+# ordr2= order("pen",10)
+# print(ordr1>ordr2)
