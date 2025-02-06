@@ -183,3 +183,17 @@
 # ordr1= order("chips",20)
 # ordr2= order("pen",10)
 # print(ordr1>ordr2)
+
+# ---->String<-----
+str = "Hiiii here i am again"
+print(str[0:5]) # slicing
+print(str.rstrip("in"))
+print(str.replace("here","there"))
+print(str.split(" "))
+print(str.center(50))
+print(str.count("i"))
+print(str.endswith("again"))
+print(str.startswith("Hiiii"))
+print(str.find("am"))
+print(str.isalnum())
+print(str.isalpha())
