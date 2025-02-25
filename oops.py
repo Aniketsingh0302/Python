@@ -182,48 +182,73 @@ import string
 # emp1.display()
 # emp2 = employee("Aman",23,26000)
 # emp2.display()
-class bankAcc:
-    def __init__(self,accountNumber,accountHolderName,balance):
-        self.accountNumber=accountNumber
-        self.accountHolderName=accountHolderName
-        self.balance=balance
-    def deposit(self,amount):
-        self.balance+=amount
-        print(f"Deposited {amount} in your account")
-        print(f"The new balance is {self.balance}")
-    def withdraw(self,amount):
-        if amount>self.balance:
-            print("Insufficient balance")
-        else:
-            self.balance-=amount
-            print(f"Withdrew {amount} from your account")
-            print(f"The new balance is {self.balance}")
-class savingAcc(bankAcc):
-    def __init__(self,accountNumber,accountHolderName,balance,interestRate):
-        super().__init__(accountNumber,accountHolderName,balance)
-        self.interestRate=interestRate
-    def calculateInterest(self):
-        interest=self.balance*self.interestRate/100
-        return interest
-    def finalBalance(self):
-        interest=self.calculateInterest()
-        bal= self.balance+interest
-        print(f"The final balance in your account Mr/Miss/Mrs {self.accountHolderName}  after adding {interest} as intrest is {bal}")
-accno=int(input("Enter your account number:"))
-accname=input("Enter your account name:")
-balance=float(input("Enter your balance:"))
-acc1= savingAcc(accno,accname,balance,4)
+# class bankAcc:
+#     def __init__(self,accountNumber,accountHolderName,balance):
+#         self.accountNumber=accountNumber
+#         self.accountHolderName=accountHolderName
+#         self.balance=balance
+#     def deposit(self,amount):
+#         self.balance+=amount
+#         print(f"Deposited {amount} in your account")
+#         print(f"The new balance is {self.balance}")
+#     def withdraw(self,amount):
+#         if amount>self.balance:
+#             print("Insufficient balance")
+#         else:
+#             self.balance-=amount
+#             print(f"Withdrew {amount} from your account")
+#             print(f"The new balance is {self.balance}")
+# class savingAcc(bankAcc):
+#     def __init__(self,accountNumber,accountHolderName,balance,interestRate):
+#         super().__init__(accountNumber,accountHolderName,balance)
+#         self.interestRate=interestRate
+#     def calculateInterest(self):
+#         interest=self.balance*self.interestRate/100
+#         return interest
+#     def finalBalance(self):
+#         interest=self.calculateInterest()
+#         bal= self.balance+interest
+#         print(f"The final balance in your account Mr/Miss/Mrs {self.accountHolderName}  after adding {interest} as intrest is {bal}")
+# accno=int(input("Enter your account number:"))
+# accname=input("Enter your account name:")
+# balance=float(input("Enter your balance:"))
+# acc1= savingAcc(accno,accname,balance,4)
 
-while True:
-    choice = int(input("choosse 1 to deposit and 2 to withdraw,press any other number to exit:"))
-    if choice==1:
-        amount=float(input("Enter the amount to deposit:"))
-        acc1.deposit(amount)
-    elif choice==2:
-        amount=float(input("Enter the amount to withdraw:"))
-        acc1.withdraw(amount)
-    else:
-        break
-    acc1.calculateInterest()
-    acc1.finalBalance()
-    
+# while True:
+#     choice = int(input("choosse 1 to deposit and 2 to withdraw,press any other number to exit:"))
+#     if choice==1:
+#         amount=float(input("Enter the amount to deposit:"))
+#         acc1.deposit(amount)
+#     elif choice==2:
+#         amount=float(input("Enter the amount to withdraw:"))
+#         acc1.withdraw(amount)
+#     else:
+#         break
+#     acc1.calculateInterest()
+#     acc1.finalBalance()
+# class battery:
+#     def __init__(self,batterybrand,batterymodel,charge):
+#         self.batterybrand=batterybrand
+#         self.batterymodel=batterymodel
+#         self.charge=charge
+#     def chargebattery(self):
+#         print(f"Your {self.batterybrand} {self.batterymodel} battery is fully charged")
+# class motor:
+#     def __init__(self,motorbrand,motormodel):
+#         self.motorbrand=motorbrand
+#         self.motormodel=motormodel
+#     def motors(self):
+#         print(f"Your {self.motorbrand} {self.motormodel} motor is working fine")
+# class electricCar(battery,motor):
+#     def __init__(self,batterybrand,batterymodel,charge,motorbrand,motormodel,carbrand,carmodel):
+#         battery.__init__(self,batterybrand,batterymodel,charge)
+#         motor.__init__(self,motorbrand,motormodel)
+#         self.carbrand=carbrand
+#         self.carmodel=carmodel
+#     def start(self):
+#         print(f"your {self.carbrand} {self.carmodel} car is started")
+
+# car1=electricCar("exide","a1",100,"Ford","PMSC","Tesla","s1")
+# car1.chargebattery()
+# car1.motors()
+# car1.start()
